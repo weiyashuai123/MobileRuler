@@ -5,11 +5,11 @@
     android:padding="10dp" >
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_centerVertical="true"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
         android:scaleType="centerCrop"
-        android:src="@drawable/line" />
+        android:src="@drawable/column" />
  <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,8 +20,8 @@
     <com.mobileruler.StraightedgeView
 
         android:id="@+id/ruler"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_centerVertical="true" />
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
