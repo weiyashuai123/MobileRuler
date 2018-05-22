@@ -2,6 +2,7 @@
  * 背景： </br>
  有一天作者在逛淘宝的时候想买一个桌子，看着淘宝店的桌子歇着80cm*60cm，作者看了看自己的手，发现自己并不知道80cm有多长（看手有毛用啊！！），于是就想到用手机来当尺子量一下自己的桌子有多长，但手机上没有刻度，于是乎这个APP就诞生啦~！
  * 说明： </br>由于二进制计算、单位转换、数据类型转换等原因，该标尺精确度有限（精确度约为0.01mm），不可用于精确测量。
+ * 该项目所用IDE为Eclipse
  * 实现效果：</br>
  ![](https://github.com/weiyashuai123/MobileRuler/blob/master/ruler_0.jpg)
  ![](https://github.com/weiyashuai123/MobileRuler/blob/master/ruler_1.jpg)
