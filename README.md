@@ -6,7 +6,7 @@
  ![](https://github.com/weiyashuai123/MobileRuler/blob/master/ruler_0.jpg)
  ![](https://github.com/weiyashuai123/MobileRuler/blob/master/ruler_1.jpg)
  ![](https://github.com/weiyashuai123/MobileRuler/blob/master/ruler_2.jpg)
- ![](https://github.com/weiyashuai123/MobileRuler/blob/master/ruler_3.jpg)
+ ![](https://github.com/weiyashuai123/MobileRuler/blob/master/ruler_4.jpg)
 ## 更新记录：</br>
 #### 2018-5-22：
 * 1.修复虚拟键占屏导致刻度出错的bug。
