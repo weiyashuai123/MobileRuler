@@ -9,15 +9,24 @@ import android.util.DisplayMetrics;
 import android.view.View;
 
 /**
- * 三角尺
+ * 三角尺-实例化控件后必须调用.build()方法来绘制。
+ * 
+ * @author 魏亚帅
+ * @update at 2018年5月22日
  **/
 public class TriangleRulerView extends View {
 
-	private int width_mm;// 控件长度-单位mm
-	private int height_mm;// 控件宽度-单位mm
-	private int pxHeight;
+	// 控件宽度-单位mm
+	private double width_mm;
+	// 控件高度-单位mm
+	private double height_mm;
+	// 控件宽度-分辨率px
 	private int pxWidth;
+	// 控件高度-分辨率px
+	private int pxHeight;
+	// 绘制刻度的长度-默认值15
 	private int lineLength = 15;
+	// 绘制刻度的画笔
 	private Paint mPaint;
 
 	// 获取相对分辨率-用于计算真实尺寸
@@ -29,14 +38,17 @@ public class TriangleRulerView extends View {
 
 	public TriangleRulerView(Context context, AttributeSet attrs) {
 		super(context, attrs);
+		// 预定义用到的变量防止初始化出错
 		width_mm = 1;
 		height_mm = 1;
 		pxHeight = 1;
 		pxWidth = 1;
+		// 定义刻度画笔
 		mPaint = new Paint();
 		mPaint.setColor(Color.parseColor("#000000"));
 		mPaint.setStyle(Paint.Style.FILL);
 		mPaint.setStrokeWidth(1);
+		mPaint.setTextSize(12 * dm.xdpi / 160);
 		mPaint.setAntiAlias(true);
 	}
 
@@ -52,8 +64,8 @@ public class TriangleRulerView extends View {
 		double width_cm = Inches_width * 2.54;
 		double height_cm = Inches_heigh * 2.54;
 		// 将cm转为mm并转为int型
-		width_mm = toInt(width_cm * 10);
-		height_mm = toInt(height_cm * 10);
+		width_mm = width_cm * 10;
+		height_mm = height_cm * 10;
 	}
 
 	public TriangleRulerView setTextSize(int size_dp) {
@@ -66,6 +78,7 @@ public class TriangleRulerView extends View {
 		return this;
 	}
 
+	// 控件重新绘制
 	public void build() {
 		invalidate();
 	}
@@ -77,9 +90,9 @@ public class TriangleRulerView extends View {
 	}
 
 	private void drawRuler(Canvas canvas) {
-		//绘制横向刻度
+		// 绘制横向刻度
 		for (int i = 0; i < width_mm; i++) {
-			float lengthNow = i * pxWidth / width_mm;
+			float lengthNow = (float) (i * pxWidth / width_mm);
 			if (lengthNow < lineLength) {
 				// 三角尺绘制折叠处（横竖交界处）
 				canvas.drawLine(lengthNow, 0, lengthNow, lengthNow, mPaint);
@@ -87,9 +100,9 @@ public class TriangleRulerView extends View {
 				drawHorizontal(canvas, i);
 			}
 		}
-		//绘制纵向刻度
+		// 绘制纵向刻度
 		for (int i = 0; i < height_mm; i++) {
-			float lengthNow = i * pxHeight / height_mm;
+			float lengthNow = (float) (i * pxHeight / height_mm);
 			if (lengthNow < lineLength) {
 				// 三角尺绘制折叠处（横竖交界处）
 				canvas.drawLine(0, lengthNow, lengthNow, lengthNow, mPaint);
@@ -99,35 +112,38 @@ public class TriangleRulerView extends View {
 		}
 	}
 
+	// 绘制第 i 条刻度（纵向）
 	private void drawVertical(Canvas canvas, int i) {
 		int length = lineLength;
 		if (i % 5 == 0) {
 			length = lineLength * 15 / 10;
 			if (i % 10 == 0) {
 				length = lineLength * 2;
-				canvas.drawText("" + i / 10, length + lineLength, i * pxHeight / height_mm + (lineLength / 2), mPaint);
+				canvas.drawText("" + i / 10, length + lineLength, (float) (i * pxHeight / height_mm + (lineLength / 2)),
+						mPaint);
 			}
 		}
-		canvas.drawLine(0, i * pxHeight / height_mm, length, i * pxHeight / height_mm, mPaint);
+		canvas.drawLine(0, (float) (i * pxHeight / height_mm), length, (float) (i * pxHeight / height_mm), mPaint);
 	}
 
+	// 绘制第 i 条刻度（横向）
 	private void drawHorizontal(Canvas canvas, int i) {
 		int length = lineLength;
 		if (i % 5 == 0) {
 			length = lineLength * 15 / 10;
 			if (i % 10 == 0) {
 				length = lineLength * 2;
-				canvas.drawText("" + i / 10, i * pxWidth / width_mm - 3, length + (lineLength * 15 / 10), mPaint);
+				canvas.drawText("" + i / 10, (float) (i * pxWidth / width_mm - 3), length + (lineLength * 15 / 10),
+						mPaint);
 			}
 		}
-		canvas.drawLine(i * pxWidth / width_mm, 0, i * pxWidth / width_mm, length, mPaint);
+		canvas.drawLine((float) (i * pxWidth / width_mm), 0, (float) (i * pxWidth / width_mm), length, mPaint);
 	}
 
-	/**
-	 * 将小数四色五入转换成整数
-	 */
-	private int toInt(double number) {
-		return Integer.parseInt(new java.text.DecimalFormat("0").format(number));
-	}
-
+	// /**
+	// * 将小数四色五入转换成整数
+	// */
+	// private int toInt(double number) {
+	// return Integer.parseInt(new java.text.DecimalFormat("0").format(number));
+	// }
 }
