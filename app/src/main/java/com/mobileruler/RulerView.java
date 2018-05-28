@@ -1,4 +1,4 @@
-package com.wys.rulerview;
+package com.mobileruler;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -6,6 +6,13 @@ import android.graphics.Color;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+
+/**
+ * please replace StraightedgeView and TriangleRulerView with RulerView.
+ *
+ * @author wys
+ * @create at 2018-5-28
+ * */
 
 public class RulerView extends RelativeLayout {
 
@@ -45,8 +52,8 @@ public class RulerView extends RelativeLayout {
             case 0:
                 lineRuler = new StraightedgeView(context);
                 image_hor = new ImageView(context);
-                lineRuler.setLineLength(scaleLength);
-                lineRuler.setTextSize(scaleTextSize);
+                lineRuler.setLineLength(15);
+                lineRuler.setTextSize(12);
                 image_hor.setLayoutParams(lp);
                 lineRuler.setLayoutParams(lp);
                 image_hor.setScaleType(ImageView.ScaleType.CENTER_CROP);
@@ -59,8 +66,8 @@ public class RulerView extends RelativeLayout {
                 triangleRuler = new TriangleRulerView(context);
                 image_hor = new ImageView(context);
                 image_ver = new ImageView(context);
-                triangleRuler.setLineLength(scaleLength);
-                triangleRuler.setTextSize(scaleTextSize);
+                triangleRuler.setLineLength(15);
+                triangleRuler.setTextSize(12);
                 triangleRuler.setLayoutParams(lp);
                 lp = new LayoutParams(LayoutParams.MATCH_PARENT, scaleLength * 6);
                 image_hor.setLayoutParams(lp);

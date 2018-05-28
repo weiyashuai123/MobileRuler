@@ -106,11 +106,13 @@ public class StraightedgeView extends View {
 			for (int i = 0; i < width_mm; i++) {
 				drawHorizontal(canvas, i);
 			}
+			canvas.drawText("单位：cm",pxWidth - mPaint.measureText("单位：cm") - 100,lineLength * 2+ mPaint.getTextSize(),mPaint);
 		} else {
 			// 纵向绘制刻度
 			for (int i = 0; i < height_mm; i++) {
 				drawVertical(canvas, i);
 			}
+			canvas.drawText("单位：cm",lineLength+mPaint.getTextSize(),mPaint.getTextSize()*3,mPaint);
 		}
 	}
 

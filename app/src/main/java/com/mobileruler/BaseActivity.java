@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 /**
  * 本工程所有Activity 的父类，存放着一些基本配置、标志位信息及常量.
- * 
+ *
  * @author weiyashuai
  * @date 2017-9-01 10:11:48
  */
