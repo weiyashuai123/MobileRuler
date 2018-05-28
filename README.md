@@ -4,15 +4,19 @@
  * 说明： </br>由于二进制计算、单位转换、数据类型转换等原因，该标尺精确度有限（精确度约为0.01mm），不可用于精确测量。
  * 该项目所用IDE为Eclipse
  * 实现效果：</br>
- ![](https://github.com/weiyashuai123/MobileRuler/blob/master/ruler_0.jpg)
- ![](https://github.com/weiyashuai123/MobileRuler/blob/master/ruler_1.jpg)
- ![](https://github.com/weiyashuai123/MobileRuler/blob/master/ruler_2.jpg)
- ![](https://github.com/weiyashuai123/MobileRuler/blob/master/ruler_4.jpg)
+ ![](https://github.com/weiyashuai123/MobileRuler/blob/master/git_res/ruler_0.jpg)
+ ![](https://github.com/weiyashuai123/MobileRuler/blob/master/git_res/ruler_1.jpg)
+ ![](https://github.com/weiyashuai123/MobileRuler/blob/master/git_res/ruler_2.jpg)
+ ![](https://github.com/weiyashuai123/MobileRuler/blob/master/git_res/ruler_4.jpg)
 ## 更新记录：</br>
-#### 2018-5-22：
+#### 2018-5-22:
 * 1.修复虚拟键占屏导致刻度出错的bug。
 * 2.修正算法，提高精确度
 * 2.新增可选标尺类型-直尺与三角尺。
+#### 2018-5-28:
+* 迁移项目至Android studio，原Eclipse项目点击 [这里](https://github.com/weiyashuai123/MobileRuler/blob/master/git_res/MobileRuler.zip) 下载
+* 封装工具类，现在可以通过添加依赖来使用该工具。
+
 
 ## 作者信息
 * QQ：592693857</br>
