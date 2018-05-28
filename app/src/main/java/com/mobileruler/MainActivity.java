@@ -24,8 +24,8 @@ public class MainActivity extends BaseActivity {
 		// double y = Math.pow(Inchesy, 2);
 		// double screenInches = Math.sqrt(x + y);
 		// logD("Screen inches : " + screenInches);
-		// logD("ÆÁÄ»¿í" + cmx + "cm");
-		// logD("ÆÁÄ»¸ß" + cmy + "cm");
+		// logD("å±å¹•å®½" + cmx + "cm");
+		// logD("å±å¹•é«˜" + cmy + "cm");
 		// logD("5.14 toInt=" + toInt(5.14));
 		// logD("5.68 toInt=" + toInt(5.68));
 		Button btn_next = (Button) findViewById(R.id.btn_next);
@@ -41,8 +41,8 @@ public class MainActivity extends BaseActivity {
 		ruler.setTextSize(12).setLineLength(10).build();
 
 		// TextView tv_hint = (TextView) findViewById(R.id.text_hint);
-		// tv_hint.setText("ÄúµÄÆÁÄ»£¨·¢¹â²¿·Ö£©" + "\n" + "¿í(Ô¼)£º" + cmx + "cm" + "\n" +
-		// "¸ß(Ô¼)£º" + cmy + "cm");
+		// tv_hint.setText("æ‚¨çš„å±å¹•ï¼ˆå‘å…‰éƒ¨åˆ†ï¼‰" + "\n" + "å®½(çº¦)ï¼š" + cmx + "cm" + "\n" +
+		// "é«˜(çº¦)ï¼š" + cmy + "cm");
 	}
 
 }
