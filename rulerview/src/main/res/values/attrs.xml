@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RulerView">
+        <attr name="ruler_background" format="color" />
+        <attr name="ruler_backgroundImage" format="reference" />
+        <attr name="ruler_scaleLength" format="dimension" />
+        <attr name="ruler_scaleColor" format="color" />
+        <attr name="ruler_type" format="enum">
+            <!--直尺-->
+            <enum name="Straight" value="0x00" />
+            <!--三角尺-->
+            <enum name="Triangle" value="0x01" />
+        </attr>
+    </declare-styleable>
+
+</resources>

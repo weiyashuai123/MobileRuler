@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MobileRuler_studio.iml" filepath="$PROJECT_DIR$/MobileRuler_studio.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rulerview/rulerview.iml" filepath="$PROJECT_DIR$/rulerview/rulerview.iml" />
     </modules>
   </component>
 </project>
