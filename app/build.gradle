@@ -10,10 +10,16 @@ android {
         targetSdkVersion 18
     }
 
+
+
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
+}
+dependencies {
+    implementation 'com.github.weiyashuai123:Views:1.2'
 }

@@ -8,6 +8,7 @@
  ![](https://github.com/weiyashuai123/MobileRuler/blob/master/git_res/ruler_1.jpg)
  ![](https://github.com/weiyashuai123/MobileRuler/blob/master/git_res/ruler_2.jpg)
  ![](https://github.com/weiyashuai123/MobileRuler/blob/master/git_res/ruler_4.jpg)
+![](https://github.com/weiyashuai123/MobileRuler/blob/master/git_res/ruler_5.jpg)
 ## 更新记录：</br>
 #### 2018-5-22:
 * 1.修复虚拟键占屏导致刻度出错的bug。
@@ -15,8 +16,38 @@
 * 2.新增可选标尺类型-直尺与三角尺。
 #### 2018-5-28:
 * 迁移项目至Android studio，原Eclipse项目点击 [这里](https://github.com/weiyashuai123/MobileRuler/raw/master/git_res/MobileRuler.zip) 下载
-* 封装工具类，现在可以通过添加依赖来使用该工具。
-
+* 封装工具类，现在可以通过添加依赖来使用该工具。如下：</br>
+  1.在工程根目录的build.gradle加入：</br>
+```
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+2.添加dependency：</br>
+```
+dependencies {
+    implementation 'com.github.weiyashuai123:Views:1.2'
+}
+```
+## 控件使用方式：
+```
+<com.wys.ruler.RulerView
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        app:ruler_type="Straight"
+        app:ruler_backgroundImage="@drawable/black"
+        app:ruler_scaleColor="@android:color/black"
+        app:ruler_scaleLength="10dp"
+        />
+属性说明：
+ruler_type:直尺类型 Straight为直尺，Triangle为三角尺
+ruler_backgroundImage:直尺背景图片
+ruler_scaleColor:刻度颜色
+ruler_scaleLength:基本刻度长度
+```
 
 ## 作者信息
 * QQ：592693857</br>

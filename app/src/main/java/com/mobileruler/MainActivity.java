@@ -5,6 +5,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
+import com.mobileruler.base.BaseActivity;
+
 public class MainActivity extends BaseActivity {
 
 	@Override
@@ -33,12 +35,9 @@ public class MainActivity extends BaseActivity {
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				quickStartActivity(HorizontalActivity.class);
 			}
 		});
-		TriangleRulerView ruler = (TriangleRulerView) findViewById(R.id.ruler);
-		ruler.setTextSize(12).setLineLength(10).build();
 
 		// TextView tv_hint = (TextView) findViewById(R.id.text_hint);
 		// tv_hint.setText("您的屏幕（发光部分）" + "\n" + "宽(约)：" + cmx + "cm" + "\n" +

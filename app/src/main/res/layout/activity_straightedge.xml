@@ -4,12 +4,12 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="10dp" >
-
-    <com.mobileruler.RulerView
-        android:id="@+id/rulerView"
-        android:layout_width="match_parent"
+    <com.wys.ruler.RulerView
+        android:layout_width="80dp"
         android:layout_height="match_parent"
-        app:ruler_backgroundImage="@drawable/ic_launcher"
-        app:ruler_type="Triangle"
-        app:ruler_scaleLength = "10dp"/>
+        app:ruler_type="Straight"
+        app:ruler_backgroundImage="@drawable/bg0"
+        app:ruler_scaleColor="@android:color/white"
+        app:ruler_scaleLength="10dp"
+        />
 </RelativeLayout>
