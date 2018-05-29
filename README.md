@@ -25,7 +25,7 @@ allprojects {
     }
 }
 ```
-2.添加dependency：</br>
+ 2.添加dependency：</br>
 ```
 dependencies {
     implementation 'com.github.weiyashuai123:Views:1.2'
